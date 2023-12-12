@@ -108,7 +108,7 @@ def train_model(
                               lr=learning_rate, weight_decay=weight_decay, momentum=momentum, foreach=True)
     scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, 'max', patience=5)  # goal: maximize Dice score
     grad_scaler = torch.cuda.amp.GradScaler(enabled=amp)
-    pos_weight = torch.tensor([5.0]).to('cuda:0')
+    pos_weight = torch.tensor([5.0]).to('cuda')
     criterion = nn.CrossEntropyLoss() if model.n_classes > 1 else nn.BCEWithLogitsLoss(pos_weight=pos_weight)
     global_step = 0
     times = 1
@@ -198,7 +198,7 @@ def train_model(
     ### ###################load best checkpoint
     model_path = 'checkpoints/checkpoint_epoch'+str(best_epoch)+'.pth'
     eval_net = UNet(n_channels=3, n_classes=args.classes, bilinear=args.bilinear)
-    eval_device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+    eval_device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     eval_net.to(device=eval_device)
     eval_state_dict = torch.load(model_path, map_location=device)
     mask_values = eval_state_dict.pop('mask_values', [0, 1])
@@ -231,7 +231,7 @@ if __name__ == '__main__':
     args = get_args()
 
     logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
-    device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     logging.info(f'Using device {device}')
 
     # Change here to adapt to your data
