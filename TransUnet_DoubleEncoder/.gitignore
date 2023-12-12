@@ -6,5 +6,4 @@ checkpoints/checkpoint_epoch1498.pth
 venv/
 .idea/
 Experiment_Data
-model/vit_checkpoint
 results
