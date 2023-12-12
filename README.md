@@ -53,9 +53,7 @@ Automatic mixed precision is also available with the `--amp` flag. [Mixed precis
 
 To train based on our developed settings, use the following command:
 
-```console
-python train.py -e 1500 -l 0.0000005 -b 2 -c 1 --amp
-```
+`python train.py -e 1500 -l 0.0000005 -b 2 -c 1 --amp`
 
 ### Prediction
 
