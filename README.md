@@ -30,7 +30,7 @@ Select desired pretrained models based on tasks. Specified the path of pretraine
 
 ### Training
 
-```console
+```
 > python train.py -h
 usage: train.py [-h] [--epochs E] [--batch-size B] [--learning-rate LR]
                 [--load LOAD] [--validation VAL] [--amp]
@@ -51,7 +51,11 @@ optional arguments:
 
 Automatic mixed precision is also available with the `--amp` flag. [Mixed precision](https://arxiv.org/abs/1710.03740) allows the model to use less memory and to be faster on recent GPUs by using FP16 arithmetic. Enabling AMP is recommended.
 
-Follow the report for our developed settings, including number of epochs, batch size, and learning rate. These have to be set manually.
+To train based on our developed settings, use the following command:
+
+```console
+python train.py -e 1500 -l 0.0000005 -b 2 -c 1 --amp
+```
 
 ### Prediction
 
