@@ -63,14 +63,13 @@ To predict a multiple images and show them without saving them:
 
 ```console
 > python predict.py -h
-usage: predict.py [-h] [--model FILE] --input INPUT [INPUT ...] 
+usage: predict.py [--model FILE] --input INPUT [INPUT ...] 
                   [--output INPUT [INPUT ...]] [--viz] [--no-save]
-                  [--mask-threshold MASK_THRESHOLD] [--scale SCALE]
+                  [-c]
 
 Predict masks from input images
 
 optional arguments:
-  -h, --help            show this help message and exit
   --model FILE, -m FILE
                         Specify the file in which the model is stored
   --input INPUT [INPUT ...], -i INPUT [INPUT ...]
@@ -79,10 +78,7 @@ optional arguments:
                         Filenames of output images
   --viz, -v             Visualize the images as they are processed
   --no-save, -n         Do not save the output masks
-  --mask-threshold MASK_THRESHOLD, -t MASK_THRESHOLD
-                        Minimum probability value to consider a mask pixel white
-  --scale SCALE, -s SCALE
-                        Scale factor for the input images
+  -c                    Specify the number of classes
 ```
 You can specify which model file to use with `--model MODEL.pth`.
 
