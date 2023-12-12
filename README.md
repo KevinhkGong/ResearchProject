@@ -1,5 +1,8 @@
 # TransDoubleNet: Semantic segmentation
 
+## Description
+All commands and setup below is required for all three models. For transUnet and transUnetDoubbleEncoder, there are additional setup instructions.
+
 Setup the Environment
 
 1. [Install CUDA](https://developer.nvidia.com/cuda-downloads)
@@ -12,18 +15,16 @@ pip install -r requirements.txt
 ```
 
 4. Download the data and run training:
-Google Drive Link: https://drive.google.com/drive/folders/1HoP40ZUwD-58HI4VjEwDiuOi1YPEagsE?usp=drive_link
+[All Processed Images](https://drive.google.com/file/d/1wd1ziFTxH41VOPb_fA_xctLkvw8OPUB8/view?usp=drive_link)
+Select desired masks and put them in masks_train and masks_test inside data folder accordingly.
 
-
-## Description
-It can be easily used for multiclass segmentation, portrait segmentation, medical segmentation, ...
+6. Download Pretrained Models (Optional)
+[All Pretrained Models](https://drive.google.com/file/d/1rLx_zKlYOATkLVVHVGPARX_bCr7mgokh/view?usp=drive_link)
+Select desired pretrained models based on tasks. Specified the path of pretrained models for prediction.
 
 
 ## Usage
 **Note : Use Python 3.6 or newer**
-
-## Pretrained model
-[pretrained model](https://github.com/milesial/Pytorch-UNet/releases/tag/v3.0) is available for the Carvana dataset. It can also be loaded from torch.hub:
 
 ### Training
 
@@ -83,7 +84,6 @@ optional arguments:
 You can specify which model file to use with `--model MODEL.pth`.
 
 
-
-
 ## Data
-
+Unprocessed Original Data can be found here:
+[Unprocessed Data](https://drive.google.com/file/d/1cBfQjVoD0U--ckFnTwiVLJPKYo7OiJ4I/view?usp=drive_link)
