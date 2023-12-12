@@ -1,6 +1,5 @@
 *.pyc
 __pycache__/
-checkpoints/checkpoint_epoch1498.pth
 *.pth
 *.jpg
 venv/
