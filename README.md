@@ -45,7 +45,7 @@ optional arguments:
                         Learning rate
   --load LOAD, -f LOAD  Load model from a .pth file
   --validation VAL, -v VAL
-                        Percent of the data that is used as validation (0-100)
+                        Percent of the data that is used as development set (0-100)
   --amp                 Use mixed precision
 ```
 
@@ -53,7 +53,7 @@ Automatic mixed precision is also available with the `--amp` flag. [Mixed precis
 
 To train based on our developed settings, use the following command:
 
-`python train.py -e 1500 -l 0.0000005 -b 2 -c 1 --amp`
+`python train.py -e 1500 -l 0.0000005 -b 2 -c 1 -v 0.148 --amp`
 
 ### Prediction
 
