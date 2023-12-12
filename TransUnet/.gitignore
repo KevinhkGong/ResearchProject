@@ -1,0 +1,11 @@
+*.pyc
+__pycache__/
+checkpoints/checkpoint_epoch1498.pth
+*.pth
+*.jpg
+venv/
+.idea/
+Experiment_Data
+model/vit_checkpoint
+model/vit_checkpoint.zip
+results
