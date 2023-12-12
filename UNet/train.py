@@ -219,7 +219,7 @@ def get_args():
     parser.add_argument('--load', '-f', type=str, default=False, help='Load model from a .pth file')
     parser.add_argument('--scale', '-s', type=float, default=0.5, help='Downscaling factor of the images')
     parser.add_argument('--validation', '-v', dest='val', type=float, default=10.0,
-                        help='Percent of the data that is used as validation (0-100)')
+                        help='Percent of the data that is used as development set (0-100)')
     parser.add_argument('--amp', action='store_true', default=False, help='Use mixed precision')
     parser.add_argument('--bilinear', action='store_true', default=False, help='Use bilinear upsampling')
     parser.add_argument('--classes', '-c', type=int, default=2, help='Number of classes')
