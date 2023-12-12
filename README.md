@@ -16,10 +16,12 @@ pip install -r requirements.txt
 
 4. Download the data and run training:
 [All Processed Images](https://drive.google.com/file/d/1wd1ziFTxH41VOPb_fA_xctLkvw8OPUB8/view?usp=drive_link)
+
 Select desired masks and put them in masks_train and masks_test inside data folder accordingly.
 
 6. Download Pretrained Models (Optional)
 [All Pretrained Models](https://drive.google.com/file/d/1rLx_zKlYOATkLVVHVGPARX_bCr7mgokh/view?usp=drive_link)
+
 Select desired pretrained models based on tasks. Specified the path of pretrained models for prediction.
 
 
@@ -49,6 +51,7 @@ optional arguments:
 
 Automatic mixed precision is also available with the `--amp` flag. [Mixed precision](https://arxiv.org/abs/1710.03740) allows the model to use less memory and to be faster on recent GPUs by using FP16 arithmetic. Enabling AMP is recommended.
 
+Follow the report for our developed settings, including number of epochs, batch size, and learning rate. These have to be set manually.
 
 ### Prediction
 
