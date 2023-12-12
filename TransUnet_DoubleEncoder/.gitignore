@@ -1,7 +1,6 @@
 *.pyc
 __pycache__/
 *.pth
-*.jpg
 venv/
 .idea/
 Experiment_Data
