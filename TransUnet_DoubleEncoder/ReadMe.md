@@ -1,4 +1,4 @@
-# Additional Setup for TransUnetDualEncoder:
+# Additional Setup for TransDualNet:
 
 1. Download [Vit Checkpoints](https://drive.google.com/file/d/1RBg6mDuvBmyGP8SpAHrEPeaBZl4TVStg/view?usp=drive_link)
 
