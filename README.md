@@ -1,4 +1,4 @@
-# TransDoubleNet: Semantic segmentation
+# TransDualNet: Semantic segmentation
 
 ## Description
 All commands and setup below is required for all three models. For transUnet and transUnetDoubbleEncoder, there are additional setup instructions. CUDA is required to train the model.
